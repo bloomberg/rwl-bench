@@ -5,7 +5,7 @@ g++ --std=c++11 bench11.cpp -o bench11 -m64 -O3 -lpthread -lrt
 
 On Darwin, the "-lrt" should be omitted.
 
-The program requires an argument that indicates the percentage, from 0 to 100, of work that should be done with a shared lock.
+The program requires an argument that indicates the percentage, from 0 to 100, of work that should be done with a shared lock (the residual is done with an exclusive lock).
 
 There are also two optional arguments.  The first is the duration for one measurement in milliseconds (20 milliseconds is the default).  The second optional argument is the number of measurements to make (100 by default).  The reported values are the amount of work done per second at the 80th percentile.
 
